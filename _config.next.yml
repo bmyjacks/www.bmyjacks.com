@@ -50,10 +50,10 @@ darkmode: false
 # ---------------------------------------------------------------
 
 favicon:
-  small: https://assets.bmyjacks.cn/icons/favicon-16x16.png?x-oss-process=style/icon
-  medium: https://assets.bmyjacks.cn/icons/favicon-32x32.png?x-oss-process=style/icon
-  apple_touch_icon: https://assets.bmyjacks.cn/icons/apple-touch-icon.png?x-oss-process=style/icon
-  safari_pinned_tab: https://assets.bmyjacks.cn/icons/safari-pinned-tab.svg
+  small: /favicon/favicon-16x16.webp
+  medium: /favicon/favicon-32x32.webp
+  apple_touch_icon: /favicon/apple-touch-icon.webp
+  safari_pinned_tab: /favicon/safari-pinned-tab.svg
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
@@ -88,7 +88,7 @@ menu:
   #schedule: /schedule/ || fa fa-calendar
   sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/index.html || fa fa-heartbeat
-  International site: https://en.blog.bmyjacks.io/ || fa fa-sitemap
+  International site: https://www.bmyjacks.com/ || fa fa-sitemap
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -126,7 +126,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://assets.bmyjacks.cn/icons/android-chrome-144x144.png?x-oss-process=style/icon
+  url: /favicon/apple-touch-icon-144x144-precomposed.webp
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -142,7 +142,7 @@ site_state: true
 social:
   GitHub: https://github.com/bmyjacks || fab fa-github
   E-Mail: mailto:support@bmyjacks.cn || fa fa-envelope
-  RSS: /atom.xml || fa fa-rss
+  #RSS: /atom.xml || fa fa-rss
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -179,7 +179,7 @@ toc:
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false
   # Maximum heading depth of generated toc.
-  max_depth: 4
+  max_depth: 3
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -366,7 +366,7 @@ codeblock:
     dark: prism-material-oceanic
   # Add copy button on codeblock
   copy_button:
-    enable: true
+    enable: false
     # Available values: default | flat | mac
     style:
 
@@ -417,7 +417,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://fonts.font.im
+  host: https://fonts.googleapis.com
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -631,7 +631,7 @@ gitalk:
 # For more information: https://utteranc.es
 utterances:
   enable: true
-  repo: bmyjacks/zh.blog.bmyjacks.io # Github repository name
+  repo: bmyjacks/www-bmyjacks-cn # Github repository name
   # Available values: pathname | url | title | og:title
   issue_term: pathname
   # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
@@ -650,7 +650,7 @@ isso: # <data_isso>
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: true
+  enable: false
   id: 23310
   color:  "#fc6423"
 
@@ -666,7 +666,7 @@ add_this_id:
 
 # Google Analytics
 google_analytics:
-  tracking_id: G-Y8TMF309D8 # <app_id>
+  tracking_id: # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
@@ -782,13 +782,13 @@ note:
   icons: true
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
-  light_bg_offset: 0
+  light_bg_offset: -12 | 12
 
 # Tabs tag
 tabs:
   transition:
     tabs: false
-    labels: true
+    labels: false
 
 # PDF tag
 # NexT will try to load pdf files natively, if failed, pdf.js will be used.
@@ -851,7 +851,7 @@ vendors:
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`
-  internal: local
+  internal: jsdelivr
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins

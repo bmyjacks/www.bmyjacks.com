@@ -18,8 +18,8 @@ root: /
 permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -147,29 +147,3 @@ neat_js:
   compress:
   exclude:
     - '*.min.js'
-
-filter_optimize:
-  enable: true
-  # remove the surrounding comments in each of the bundled files
-  remove_comments: true
-  css:
-    # minify all css files
-    minify: false
-    # bundle loaded css files into one
-    bundle: true
-    # use a script block to load css elements dynamically
-    delivery: true
-    # make specific css content inline into the html page
-    #   - only support the full path
-    #   - default is ['css/main.css']
-    inlines:
-    excludes:
-  js:
-    # minify all js files
-    minify: true
-    # bundle loaded js files into one
-    bundle: true
-    excludes:
-  # set the priority of this plugin,
-  # lower means it will be executed first, default of Hexo is 10
-  priority: 20

@@ -38,14 +38,14 @@ sudo bash basic-install.sh
 在看到Pihole的logo之后进入了安装页面，直接回车到以下页面，
 
 用方向键滚动到最底下，选择`Custom`：
-![](https://assets.bmyjacks.cn/img/20200309180649.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180649.png?x-oss-process=style/style)
 
 输入上游DNS地址（这里以阿里云和百度为例）：
-![](https://assets.bmyjacks.cn/img/20200309180701.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180701.png?x-oss-process=style/style)
 
 
 之后一连串的回车来到这个页面：
-![](https://assets.bmyjacks.cn/img/20200309180712.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180712.png?x-oss-process=style/style)
 
 
 ```bash
@@ -53,7 +53,7 @@ On #指的是安装web控制页面
 Off #指不安装web控制页面
 ```
 这里我们选择`On`回车下一步
-![](https://assets.bmyjacks.cn/img/20200309180726.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180726.png?x-oss-process=style/style)
 
 这里选择是否安装web服务器端（lighttpd），如果您已经在服务器上安装了web服务端（比如nginx、apache）就选择`Off`，否则选择`On`安装lighttpd服务端。
 
@@ -66,16 +66,16 @@ Off #指不安装web控制页面
 pihole -a -p
 ```
 修改完成之后访问浏览器`http://你的IP地址/admin`进入web控制页面
-![](https://assets.bmyjacks.cn/img/20200309180738.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180738.png?x-oss-process=style/style)
 
 点击左侧的`Login`登录
-![](https://assets.bmyjacks.cn/img/20200309180757.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180757.png?x-oss-process=style/style)
 
 输入你刚刚设定的密码，可以勾选记住。
-![](https://assets.bmyjacks.cn/img/20200309180757.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180757.png?x-oss-process=style/style)
 
 点击左侧的`Settings`进入设置页面
-![](https://assets.bmyjacks.cn/img/20200309180818.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180818.png?x-oss-process=style/style)
 
 在这里我们可以看到各种设定：
 ```bash
@@ -103,7 +103,7 @@ cache-size=200000
 # 保存，退出
 ```
 之后在web控制页面重启DNS服务器即可
-![](https://assets.bmyjacks.cn/img/20200309180857.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180857.png?x-oss-process=style/style)
 
 
 ## 将Pihole设置为你的DNS服务器

@@ -7,7 +7,7 @@ keywords: [markdown, github, gitee, osc, opensource, 使用方法, 正确语法,
 date: 2020-03-22 11:45:15
 ---
 
-![](https://assets.bmyjacks.cn/img/20200322113727.jpg?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200322113727.jpg?x-oss-process=style/style)
 ## 标题
 ```markdown
 # 一级标题
@@ -179,7 +179,7 @@ ___粗斜体___
 这是`句子中的代码`。
     这是空四格代码print("Hello")
 ```
-![](https://assets.bmyjacks.cn/img/20200322143630.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200322143630.png?x-oss-process=style/style)
 
 这是`句子中的代码`。
 ```
@@ -197,7 +197,7 @@ ___粗斜体___
 ![图片alt](链接地址)
 ```
 [文字链接](https://www.bmyjacks.cn/2020/markdown.html#文字连接)
-![图片链接](https://assets.bmyjacks.cn/img/20200322144321.png?x-oss-process=style/style)
+![图片链接](https://cdn.bmyjacks.io/img/20200322144321.png?x-oss-process=style/style)
 ### 高级链接
 ```markdown
 这是一条[高级链接][1]

@@ -20,7 +20,7 @@ date: 2020-08-13 09:29:29
 
 向下滑动至
 
-![下载arduino](https://assets.bmyjacks.cn/img/20200813090226.png?x-oss-process=style/style)
+![下载arduino](https://cdn.bmyjacks.io/img/20200813090226.png?x-oss-process=style/style)
 
 单击图片中的`Windows Installer`进行安装程序下载
 
@@ -35,13 +35,13 @@ date: 2020-08-13 09:29:29
 ### 方式一
 单击`文件>首选项`或点按`Ctrl + ,(逗号)`
 
-![](https://assets.bmyjacks.cn/img/20200813091825.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200813091825.png?x-oss-process=style/style)
 
 在“附加开发板管理器网址”一栏中填写`http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 使用“好”保存后，找到`工具>开发板>开发板管理器`，搜索“esp8266”
 
-![](https://assets.bmyjacks.cn/img/20200813092116.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200813092116.png?x-oss-process=style/style)
 
 安装对应开发板即可完成配置esp8266开发环境
 

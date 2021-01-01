@@ -14,7 +14,7 @@ date: 2020-02-19 22:07:08
 
 ## 首先，我们进入[下载Qt的页面](http://download.qt.io/)
 
-![](https://assets.bmyjacks.cn/img/20200309180333.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180333.png?x-oss-process=style/style)
 
 
 文件结构类似于：
@@ -37,7 +37,7 @@ date: 2020-02-19 22:07:08
 
 点击进入[official_releases/qt/5.14/5.14.1/](http://download.qt.io/official_releases/qt/5.14/5.14.1/)
 
-![](https://assets.bmyjacks.cn/img/20200309180345.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180345.png?x-oss-process=style/style)
 
 
 有三个安装文件：
@@ -50,39 +50,39 @@ date: 2020-02-19 22:07:08
 
 由于我们使用Windows，所以选择第一个安装文件，点击安装文件后面的`Details`查看详情
 
-![](https://assets.bmyjacks.cn/img/20200309180345.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180345.png?x-oss-process=style/style)
 
 
 选择下载源（推荐USTC或者TUNA）之后开始下载。
 
 下载完成之后得到安装文件
 
-![](https://assets.bmyjacks.cn/img/20200309180410.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180410.png?x-oss-process=style/style)
 
 
 ## 现在我们来开始安装
 
 双击打开安装程序，点击`Next`之后需要登录
 
-![](https://assets.bmyjacks.cn/img/20200309180420.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180420.png?x-oss-process=style/style)
 
 
 {% note warning %}
 ### 注意
 注册账户可去[**官网**](www.qt.io)注册，滑动到最低端的右下角
 
-![](https://assets.bmyjacks.cn/img/20200309180434.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180434.png?x-oss-process=style/style)
 
 {% endnote %}
 
 登陆完毕之后，同意开源许可证，选择安装位置，就来到了**选择安装组件**的地方
 
-![](https://assets.bmyjacks.cn/img/20200309180445.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180445.png?x-oss-process=style/style)
 
 
 这里我们展开列表，勾选上如图示的组件
 
-![](https://assets.bmyjacks.cn/img/20200309180501.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180501.png?x-oss-process=style/style)
 
 
 {% note warning %}
@@ -95,12 +95,12 @@ date: 2020-02-19 22:07:08
 ## 最后
 安装好之后，开始菜单中出现Qt的程序
 
-![](https://assets.bmyjacks.cn/img/20200309180521.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180521.png?x-oss-process=style/style)
 
 
 点击`Qt Creator 4.11.0(Community)`打开QtC页面
 
-![](https://assets.bmyjacks.cn/img/20200309180521.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180521.png?x-oss-process=style/style)
 
 {% note success %}
 ## 恭喜

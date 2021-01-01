@@ -45,7 +45,7 @@ useradd -g www www
 
 首先进入[nginx官网](http://nginx.org/en/download.html)查看最新版本
 
-![](https://assets.bmyjacks.cn/img/20200309175844.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309175844.png?x-oss-process=style/style)
 
 这里选择最新的`1.17.8`版本
 
@@ -77,7 +77,7 @@ cd nginx-1.17.8
 ./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-stream --with-http_gzip_static_module --with-http_sub_module
 ```
 
-![](https://assets.bmyjacks.cn/img/20200309175912.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309175912.png?x-oss-process=style/style)
 
 看到配置结果说明配置成功了
 
@@ -102,7 +102,7 @@ make install
 /usr/local/nginx/sbin/ngin
 ```
 
-![](https://assets.bmyjacks.cn/img/20200309175943.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309175943.png?x-oss-process=style/style)
 
 ## 其他使用事项
 

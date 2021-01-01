@@ -10,6 +10,7 @@ keywords:
 author: bmyjacks
 language: zh-CN
 timezone: 'Asia/Shanghai'
+email: bmyjacks@bmyjacks.io
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
@@ -131,6 +132,12 @@ symbols_count_time:
   total_time: true
   awl: 2
   wpm: 200
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 50
+
 
 neat_enable: true
 neat_html:

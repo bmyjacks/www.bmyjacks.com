@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /404/
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Sitemap: https://www.bmyjacks.cn/sitemap.xml
+Sitemap: https://www.bmyjacks.cn/baidusitemap.xml

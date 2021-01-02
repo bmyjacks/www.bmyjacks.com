@@ -44,7 +44,7 @@ useradd -g www www
 
 First enter [nginx official website](http://nginx.org/en/download.html)to check the latest version
 
-![](https://assets.bmyjacks.cn/img/20200309175844.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309175844.png?x-oss-process=style/style)
 
 Choose the latest `1.17.8` version here
 
@@ -75,7 +75,7 @@ Configure nginx
 ./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-stream --with-http_gzip_static_module --with-http_sub_module
 ```
 
-![](https://assets.bmyjacks.cn/img/20200309175912.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309175912.png?x-oss-process=style/style)
 
 Seeing the configuration result shows that the configuration is successful
 
@@ -100,7 +100,7 @@ Start the service and visit the corresponding IP address
 /usr/local/nginx/sbin/nginx
 ```
 
-![](https://assets.bmyjacks.cn/img/20200309175943.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309175943.png?x-oss-process=style/style)
 
 ## Other usage matters
 

@@ -14,7 +14,7 @@ description: Want to use Hexo to write a personal blog, but don't know how to st
 date: 2020-02-09 15:49:20
 ---
 
-![Hexo Logo](https://assets.bmyjacks.cn/img/20200309164643.png?x-oss-process=style/style)
+![Hexo Logo](https://cdn.bmyjacks.io/img/20200309164643.png?x-oss-process=style/style)
 
 ## First, we need Git and Node.js
 The installation of Git will not be demonstrated. I believe everyone who wants to use Hexo will install git.
@@ -25,17 +25,17 @@ Go to [node.js official website](https://nodejs.org/en/) to download.
 
 Both the left and right can be downloaded, here is an example of the right:
 
-![node.js download](https://assets.bmyjacks.cn/img/20200309164723.png?x-oss-process=style/style)
+![node.js download](https://cdn.bmyjacks.io/img/20200309164723.png?x-oss-process=style/style)
 
 Next, we install node.js in the normal way.
 
 After the installation is complete, enter `node -v` in the command line to view the node version, the installation is successful if the version number appears, as shown in the following figure:
 
-![node version](https://assets.bmyjacks.cn/img/20200309165142.png?x-oss-process=style/style)
+![node version](https://cdn.bmyjacks.io/img/20200309165142.png?x-oss-process=style/style)
 
 `npm -v` to view the npm version:
 
-![npm version](https://assets.bmyjacks.cn/img/20200309165203.png?x-oss-process=style/style)
+![npm version](https://cdn.bmyjacks.io/img/20200309165203.png?x-oss-process=style/style)
 
 OK, we have installed node.js.
 
@@ -47,35 +47,35 @@ Let's take a look at the meaning of this command:
 
 After clicking Enter, we saw a bunch of strange characters output from the command line. Leave him alone. Seeing these prompts indicates that your installation was successful:
 
-![install Hexo](https://assets.bmyjacks.cn/img/20200309165221.png?x-oss-process=style/style)
+![install Hexo](https://cdn.bmyjacks.io/img/20200309165221.png?x-oss-process=style/style)
 
 
 ## Next, create a new folder and install Hexo
 
 We create a new folder with any name.
 
-![create folder](https://assets.bmyjacks.cn/img/20200309165237.png?x-oss-process=style/style)
+![create folder](https://cdn.bmyjacks.io/img/20200309165237.png?x-oss-process=style/style)
 
 
 In the upper level folder, enter `hexo init <your folder name>` to initialize this folder:
 
-![hexo initial](https://assets.bmyjacks.cn/img/20200309165254.png?x-oss-process=style/style)
+![hexo initial](https://cdn.bmyjacks.io/img/20200309165254.png?x-oss-process=style/style)
 
 Ok, now let's enter this folder and run `npm install` to install some dependent package files:
 
-![npm install](https://assets.bmyjacks.cn/img/20200309165311.png?x-oss-process=style/style)
+![npm install](https://cdn.bmyjacks.io/img/20200309165311.png?x-oss-process=style/style)
 
 Then run `hexo generate` or `hexo g` (the two commands are actually the same) to initialize Hexo:
 
-![hexo generate](https://assets.bmyjacks.cn/img/20200309165331.png?x-oss-process=style/style)
+![hexo generate](https://cdn.bmyjacks.io/img/20200309165331.png?x-oss-process=style/style)
 
 Then, enter `hexo server` or `hexo s` (the two commands are the same) to run Hexo web server locally:
 
-![hexo server](https://assets.bmyjacks.cn/img/20200309165342.png?x-oss-process=style/style)
+![hexo server](https://cdn.bmyjacks.io/img/20200309165342.png?x-oss-process=style/style)
 
 Now, open your browser, enter [`localhost:4000`](https://localhost:4000) in the address bar and press enter to enter the web page
 
-![browser](https://assets.bmyjacks.cn/img/20200309165352.png?x-oss-process=style/style)
+![browser](https://cdn.bmyjacks.io/img/20200309165352.png?x-oss-process=style/style)
 
 Well, we have successfully installed hexo
 

@@ -25,11 +25,11 @@ Since `AdGuard Home` only supports the `Debian` at present, we use  **debian9 AM
 
 Click`releases`
 
-![GitHub-Releases-Page](https://assets.bmyjacks.cn/img/20200309194654.png?x-oss-process=style/style)
+![GitHub-Releases-Page](https://cdn.bmyjacks.io/img/20200309194654.png?x-oss-process=style/style)
 
 Download the latest version
 
-![Downloading](https://assets.bmyjacks.cn/img/20200309194854.png?x-oss-process=style/style)
+![Downloading](https://cdn.bmyjacks.io/img/20200309194854.png?x-oss-process=style/style)
 
 ### After downloading, unzip it and into the folder
 ```bash
@@ -37,7 +37,7 @@ tar -xzvf AdGuardHome_linux_amd64.tar.gz
 cd AdGuardHome/
 ```
 
-![Folder](https://assets.bmyjacks.cn/img/20200309201502.png?x-oss-process=style/style)
+![Folder](https://cdn.bmyjacks.io/img/20200309201502.png?x-oss-process=style/style)
 
 Install the dependency `sudo apt-get install sudo nano bind9-host`
 
@@ -46,7 +46,7 @@ Input `sudo ./AdGuardHome -s install` to install AdGuard Home
 ## Open web panel
 Visit`http://ip:3000`，Click Next until this page
 
-![confirgure](https://assets.bmyjacks.cn/img/20200309202015.png?x-oss-process=style/style)
+![confirgure](https://cdn.bmyjacks.io/img/20200309202015.png?x-oss-process=style/style)
 
 Fill in your password and click next to complete the installation.
 

@@ -44,14 +44,14 @@ sudo bash basic-install.sh
 After seeing Pi-hole’s logo, I entered the installation page, and then hit enter directly to the following page,
 
 Use the arrow keys to scroll to the bottom and select `Custom`:
-![](https://assets.bmyjacks.cn/img/20200309180649.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180649.png?x-oss-process=style/style)
 
 Enter the upstream DNS address (here, take Alibaba Cloud and Baidu as examples):
-![](https://assets.bmyjacks.cn/img/20200309180701.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180701.png?x-oss-process=style/style)
 
 
 After a series of carriage returns came to this page:
-![](https://assets.bmyjacks.cn/img/20200309180712.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180712.png?x-oss-process=style/style)
 
 
 ```bash
@@ -60,7 +60,7 @@ Off #Means not to install the web control page
 ```
 
 Here we choose `On` and press Enter to the next step
-![](https://assets.bmyjacks.cn/img/20200309180726.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180726.png?x-oss-process=style/style)
 
 Here you choose whether to install the web server (lighttpd). If you have installed the web server (such as nginx, apache) on the server, select `Off`, otherwise select `On` to install the lighttpd server.
 
@@ -75,16 +75,16 @@ pihole -a -p
 ```
 
 After the modification is completed, visit the browser `http://localhost/admin` to enter the web control page
-![](https://assets.bmyjacks.cn/img/20200309180738.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180738.png?x-oss-process=style/style)
 
 Click on `Login` on the left to log in
-![](https://assets.bmyjacks.cn/img/20200309180757.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180757.png?x-oss-process=style/style)
 
 Enter the password you just set, you can tick remember.
-![](https://assets.bmyjacks.cn/img/20200309180757.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180757.png?x-oss-process=style/style)
 
 Click on `Settings` on the left to enter the settings page
-![](https://assets.bmyjacks.cn/img/20200309180818.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180818.png?x-oss-process=style/style)
 
 Here we can see various settings:
 ```bash
@@ -113,7 +113,7 @@ cache-size=200000
 # Save, exit
 ```
 Then restart the DNS server on the web control page
-![](https://assets.bmyjacks.cn/img/20200309180857.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200309180857.png?x-oss-process=style/style)
 
 
 ## Set Pi-hole as your DNS server

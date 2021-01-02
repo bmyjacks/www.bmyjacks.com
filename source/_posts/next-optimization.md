@@ -53,7 +53,7 @@ Line 159~166
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://assets.bmyjacks.cn/icons/android-chrome-144x144.png?x-oss-process=style/icon
+  url: https://cdn.bmyjacks.io/icons/android-chrome-144x144.png?x-oss-process=style/icon
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.

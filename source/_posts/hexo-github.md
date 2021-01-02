@@ -20,15 +20,15 @@ date: 2020-03-16 15:27:56
 ### Create GitHub repository
 First, we create a new GitHub repository
 
-![20200316150827](https://assets.bmyjacks.cn/img/20200316150827.png?x-oss-process=style/style)
+![20200316150827](https://cdn.bmyjacks.io/img/20200316150827.png?x-oss-process=style/style)
 
-![20200316150902](https://assets.bmyjacks.cn/img/20200316150902.png?x-oss-process=style/style)
+![20200316150902](https://cdn.bmyjacks.io/img/20200316150902.png?x-oss-process=style/style)
 
 modify config.yml
 
 Open the configuration file of hexo. The default` http://yoursite.com ` replace with your own URL
 
-![20200316151051](https://assets.bmyjacks.cn/img/20200316151051.png?x-oss-process=style/style)
+![20200316151051](https://cdn.bmyjacks.io/img/20200316151051.png?x-oss-process=style/style)
 
 Replace `deploy` at the bottom of the configuration file with
 ```yml
@@ -67,7 +67,7 @@ public/
 .deploy*/
 ```
 
-![20200316152215](https://assets.bmyjacks.cn/img/20200316152215.png?x-oss-process=style/style)
+![20200316152215](https://cdn.bmyjacks.io/img/20200316152215.png?x-oss-process=style/style)
 
 Add remote repository
 ```bash

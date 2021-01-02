@@ -12,7 +12,7 @@ keywords: [markdown, github, gitee, osc, opensource, blog, blogger, hexo]
 date: 2020-03-22 11:45:15
 ---
 
-![](https://assets.bmyjacks.cn/img/20200322113727.jpg?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200322113727.jpg?x-oss-process=style/style)
 
 ## Titles
 ```markdown
@@ -196,7 +196,7 @@ Due to the limitation of code representation in this blog, I suggest you use the
 ```
 
 [TextLink](https://www.bmyjacks.com/2020/markdown.html#TextLink)
-![Pictures linking](https://assets.bmyjacks.cn/img/20200322144321.png?x-oss-process=style/style)
+![Pictures linking](https://cdn.bmyjacks.io/img/20200322144321.png?x-oss-process=style/style)
 
 ### Advanced links
 ```markdown

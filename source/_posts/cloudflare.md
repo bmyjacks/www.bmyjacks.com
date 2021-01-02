@@ -22,14 +22,14 @@ Because each domain name registrar is different, so I won’t do a demonstration
 ## Configure firewall
 After entering the dashboard, click on `Firewall` to enter `Firewall Rules`
 
-![firewall rules](https://assets.bmyjacks.cn/img/20200325071518.png?x-oss-process=style/style)
+![firewall rules](https://cdn.bmyjacks.io/img/20200325071518.png?x-oss-process=style/style)
 
 ### Block malicious bots
 Create a new Firewall Rules.
 
 First, we configure rules to block some bots that pose a threat to the website
 
-![example](https://assets.bmyjacks.cn/img/20200325072055.png?x-oss-process=style/style)
+![example](https://cdn.bmyjacks.io/img/20200325072055.png?x-oss-process=style/style)
 
 Write in 2
 
@@ -306,13 +306,13 @@ Bypass
 
 Click Save and make sure it is set to open. Now, most malicious bots cannot access your website!
 
-![Turn on the firewall](https://assets.bmyjacks.cn/img/20200325072746.png?x-oss-process=style/style)
+![Turn on the firewall](https://cdn.bmyjacks.io/img/20200325072746.png?x-oss-process=style/style)
 
 
 ## Malicious IP
 Create a new `Firewall Rule` and edit the options as shown
 
-![Whreat score](https://assets.bmyjacks.cn/img/20200325080814.png?x-oss-process=style/style)
+![Whreat score](https://cdn.bmyjacks.io/img/20200325080814.png?x-oss-process=style/style)
 
 ```bash
 Threat Score #IP Threat Index

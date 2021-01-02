@@ -18,7 +18,7 @@ description: After using windows for a long time, do you want to switch to linux
 ### Download the manjaro image
 Go to [manjaro official website](https://manjaro.org/download/)
 
-![manjaro-install](https://assets.bmyjacks.cn/img/20200331085728.png?x-oss-process=style/style)
+![manjaro-install](https://cdn.bmyjacks.io/img/20200331085728.png?x-oss-process=style/style)
 
 ```bash
 XFCE #A lightweight desktop system
@@ -32,11 +32,11 @@ We choose `KDE Plasma` to download
 ### Download tool
 Go to [rufus official website](http://rufus.ie/)and download [rufus](https://github.com/pbatard/rufus/releases/download/v3.9/rufus-3.9.exe)
 
-![rufus website](https://assets.bmyjacks.cn/img/20200331091353.png?x-oss-process=style/style)
+![rufus website](https://cdn.bmyjacks.io/img/20200331091353.png?x-oss-process=style/style)
 
 ## Write image
 Open rufus
-![rufus tool](https://assets.bmyjacks.cn/img/20200331155031.png?x-oss-process=style/style)
+![rufus tool](https://cdn.bmyjacks.io/img/20200331155031.png?x-oss-process=style/style)
 Select the inserted disk in the device, select the downloaded image, click start, and wait for a while
 
 ## install the manjaro
@@ -52,30 +52,30 @@ Use UEFI to boot on modern computers.
 ## Start installing
 After booting from the U disk, the following screen appears
 
-![boot](https://assets.bmyjacks.cn/img/20200331155930.png?x-oss-process=style/style)
+![boot](https://cdn.bmyjacks.io/img/20200331155930.png?x-oss-process=style/style)
 
 Use your custom configuration instead of the configuration in the picture
 
-![boot](https://assets.bmyjacks.cn/img/20200331160034.png?x-oss-process=style/style)
+![boot](https://cdn.bmyjacks.io/img/20200331160034.png?x-oss-process=style/style)
 
 Select `boot` and click <kbd>Enter</kbd> to enter the live system
 
-![manjaro live](https://assets.bmyjacks.cn/img/20200331160423.png?x-oss-process=style/style)
+![manjaro live](https://cdn.bmyjacks.io/img/20200331160423.png?x-oss-process=style/style)
 
 Close the welcome screen, double click the first item on the desktop `Install Manjaro Linux` to enter the installer
 
-![install manjaro](https://assets.bmyjacks.cn/img/20200331160830.png?x-oss-process=style/style)
+![install manjaro](https://cdn.bmyjacks.io/img/20200331160830.png?x-oss-process=style/style)
 
 Use your custom configuration instead of the configuration in the picture
 
-![choose language](https://assets.bmyjacks.cn/img/20200331161011.png?x-oss-process=style/style)
+![choose language](https://cdn.bmyjacks.io/img/20200331161011.png?x-oss-process=style/style)
 
-![time zones](https://assets.bmyjacks.cn/img/20200331161145.png?x-oss-process=style/style)
+![time zones](https://cdn.bmyjacks.io/img/20200331161145.png?x-oss-process=style/style)
 
-![keyboard](https://assets.bmyjacks.cn/img/20200331161323.png?x-oss-process=style/style)
+![keyboard](https://cdn.bmyjacks.io/img/20200331161323.png?x-oss-process=style/style)
 At this step, you can choose either `Erase Disk` or `Manual Partition`. If you choose `Erase Disk`, you can directly watch the subsequent installation. If you choose `Manual Partition`, please continue to look down.
 
-![disk](https://assets.bmyjacks.cn/img/20200331162312.png?x-oss-process=style/style)
+![disk](https://cdn.bmyjacks.io/img/20200331162312.png?x-oss-process=style/style)
 
 Click New Partition Table, select `GUID Partition Table (GPT)` format, click Next
 
@@ -166,11 +166,11 @@ The scheme used by the blogger, three hard drives, SSD1 240G SSD2 500G HDD 2T.
 ```
 
 After adjusting the partition, we started the installation
-![install manjaro](https://assets.bmyjacks.cn/img/20200331175142.png?x-oss-process=style/style)
+![install manjaro](https://cdn.bmyjacks.io/img/20200331175142.png?x-oss-process=style/style)
 
 Fill in the name and password, the next step
 
-![username password](https://assets.bmyjacks.cn/img/20200331175554.png?x-oss-process=style/style)
+![username password](https://cdn.bmyjacks.io/img/20200331175554.png?x-oss-process=style/style)
 
 Select the office suite to install
 ```bash
@@ -184,6 +184,6 @@ Continue to click Next, check that the changes are the same as you thought, clic
 ## Start the installed system
 After the installation is complete, turn off the computer, pull out the U disk, and turn on the desktop. Wow!
 
-![manjaro desktop](https://assets.bmyjacks.cn/img/20200331182148.png?x-oss-process=style/style)
+![manjaro desktop](https://cdn.bmyjacks.io/img/20200331182148.png?x-oss-process=style/style)
 
 Turn off `Launch at start` so that the system is installed.

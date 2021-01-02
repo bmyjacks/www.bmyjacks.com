@@ -20,7 +20,7 @@ First go to [Arduino official website](https://www.arduino.cc/)，go[download ID
 
 Slide down to
 
-![Download arduino](https://assets.bmyjacks.cn/img/20200813090226.png?x-oss-process=style/style)
+![Download arduino](https://cdn.bmyjacks.io/img/20200813090226.png?x-oss-process=style/style)
 
 Click 'Windows Installer' in the page to download the installation program
 
@@ -35,13 +35,13 @@ After the download is completed, run the installation program and allow the user
 ### Method 1
 Click`Files>Preferences`or press`Ctrl + ,(comma)`
 
-![](https://assets.bmyjacks.cn/img/20200813091825.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200813091825.png?x-oss-process=style/style)
 
 Fill `Additional development board manager website` column with `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 Click “OK” to save it，then go to `Tools>development board>development board manager`，search `esp8266`
 
-![](https://assets.bmyjacks.cn/img/20200813092116.png?x-oss-process=style/style)
+![](https://cdn.bmyjacks.io/img/20200813092116.png?x-oss-process=style/style)
 
 Install the corresponding development board to complete the configuration of the esp8266 development environment.
 

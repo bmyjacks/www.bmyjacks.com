@@ -3,5 +3,5 @@ Disallow: /404/
 Disallow: /css/
 Disallow: /images/
 Disallow: /js/
-Sitemap: https://www.bmyjacks.cn/sitemap.xml
-Sitemap: https://www.bmyjacks.cn/baidusitemap.xml
+Sitemap: https://www.bmyjacks.com/sitemap.xml
+Sitemap: https://www.bmyjacks.com/baidusitemap.xml

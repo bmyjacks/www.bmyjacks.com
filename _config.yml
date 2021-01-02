@@ -8,13 +8,13 @@ subtitle: 'the box of ideas'
 description: ''
 keywords:
 author: bmyjacks
-language: zh-CN
-timezone: 'Asia/Shanghai'
+language: en
+timezone: 'UTC'
 email: bmyjacks@bmyjacks.io
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://www.bmyjacks.cn
+url: https://www.bmyjacks.com
 root: /
 permalink: :year/:title/
 permalink_defaults:
@@ -137,7 +137,6 @@ feed:
   type: atom
   path: atom.xml
   limit: 50
-
 
 neat_enable: true
 neat_html:

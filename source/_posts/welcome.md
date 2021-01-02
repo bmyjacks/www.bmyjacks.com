@@ -1,12 +1,12 @@
 ---
-title: 欢迎
+title: Welcome
 date: 2020-02-07 19:03:12
 tags:
-description: 欢迎大家来到我的的博客
+description: Welcome to my blog
 ---
 
-## 欢迎来到我的博客！
-欢迎大家来到我的博客，在这里，你能看到一些新奇有趣的科技资讯和教程，请慢慢享用！
+## Welcome to my blog！
+Welcome to my blog, here, you can see some interesting tips, please enjoy!
 
-## 有问题？
-如果你对本博客的任何一页内容有疑问，请在该页面下方评论，我将会严肃处理，感谢您的支持！
+## Something wrong？
+If you have any questions about any page of this blog, please comment at the bottom of the page. I will take it seriously. Thank you for your support!

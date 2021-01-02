@@ -1,25 +1,38 @@
 ---
-title: 用CloudFlare来保护个人博客
-tags: [CloudFlare, blog, 网络攻击]
-categories: CloudFlare
-description: 最近许多个人博客都遭到不同程度的攻击，让我们看看如何使用强大的CloudFlare来保护我们的网站吧！
-keywords: [CloudFlare, blog, ddos]
+title: Use CloudFlare to protect personal blogs
+tags:
+  - CloudFlare
+  - blog
+categories:
+  - CloudFlare
+description: Recently, many personal blogs have been attacked to varying degrees. Let us see how to use the powerful CloudFlare to protect our website!
+keywords:
+  - CloudFlare
+  - blog
+  - ddos
 date: 2020-03-25 08:12:55
 ---
-## 将域名解析到CloudFlare
+
+## Resolve domain name to CloudFlare
 {% note info %}
-### 信息
-由于各个域名注册商不同，所以在此就不做演示
+### info
+Because each domain name registrar is different, so I won’t do a demonstration here
 {% endnote %}
 
-## 配置防火墙
-进入dashboard后，点击Firewall，进入到Firewall Rules
-![firewall rules](https://cdn.bmyjacks.io/img/20200325071518.png?x-oss-process=style/style)
+## Configure firewall
+After entering the dashboard, click on `Firewall` to enter `Firewall Rules`
 
-### 拦截恶意bot
-新建一个Firewall Rules，首先我们配置规则让一些会对网站造成威胁的bot进行拦截
-![example](https://cdn.bmyjacks.io/img/20200325072055.png?x-oss-process=style/style)
-在2中写入
+![firewall rules](https://assets.bmyjacks.cn/img/20200325071518.png?x-oss-process=style/style)
+
+### Block malicious bots
+Create a new Firewall Rules.
+
+First, we configure rules to block some bots that pose a threat to the website
+
+![example](https://assets.bmyjacks.cn/img/20200325072055.png?x-oss-process=style/style)
+
+Write in 2
+
 ```bash
 (http.user_agent eq "404") or
 (http.user_agent eq "nmap") or
@@ -281,34 +294,38 @@ date: 2020-03-25 08:12:55
 (http.user_agent eq "httperf")
 ```
 
-接着可以在1中设置防火墙规则的名称，在3中选择出触发防火墙规则后的动作
-```bash
-Block #阻止访问
-JS Challenge #使用JS验证，bot无法通过验证，浏览器可以通过验证(推荐用于bot)
-Challenge(Captcha) #使用验证码验证，浏览器必须输入验证码才可访问(中国也可查看验证码页面)
-Allow #允许访问
-Bypass #跳过(这个目前博主也不太明白具体是什么意思，希望各路大神多多指教)
-```
-
-点击保存，确保设置为打开状态，现在，恶意bot就无法访问您的网站了！
-![Turn on the firewall](https://cdn.bmyjacks.io/img/20200325072746.png?x-oss-process=style/style)
-
-
-## 恶意IP
-新建Firewall Rule，按照图示编辑选项
-![Whreat score](https://cdn.bmyjacks.io/img/20200325080814.png?x-oss-process=style/style)
+Then you can set the name of the firewall rule in 1, and select the action after triggering the firewall rule in 3.
 
 ```bash
-Threat Score #IP威胁指数
-# TS>50 威胁性很高
-# 24<TS<50 威胁性中
-# TS>10 威胁性低
+Block #Block access
+JS Challenge #Use JS verification, bots cannot pass verification, browser can pass verification (recommended for bot)
+Challenge(Captcha) #Use the verification code to verify, the browser must enter the verification code to access
+Allow #Allow access
+Bypass
 ```
 
-点击`And`，选择`Known bots`,关闭开关。
-并且不是已知的优良bot，保存，成功！
+Click Save and make sure it is set to open. Now, most malicious bots cannot access your website!
+
+![Turn on the firewall](https://assets.bmyjacks.cn/img/20200325072746.png?x-oss-process=style/style)
+
+
+## Malicious IP
+Create a new `Firewall Rule` and edit the options as shown
+
+![Whreat score](https://assets.bmyjacks.cn/img/20200325080814.png?x-oss-process=style/style)
+
+```bash
+Threat Score #IP Threat Index
+# TS>50 Very threatening
+# 24<TS<50 Mid threatening
+# TS>10 Low threatening
+```
+
+Click `And`, select `Known bots`, and turn off the switch.
+
+And it is not a known good bot, save it, succeed!
 
 {% note success %}
-## 恭喜
-恭喜您，目前网上的一些普通攻击已经无法对您的网站造成伤害了
+## Congratulations
+Congratulations to you，Some common attacks on the Internet can no longer cause damage to your website
 {% endnote %}

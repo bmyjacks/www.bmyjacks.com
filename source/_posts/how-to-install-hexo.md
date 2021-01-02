@@ -1,87 +1,94 @@
 ---
-title: 如何安装Hexo
-tags: [hexo, GitHub]
-categories: [hexo]
-keywords: [hexo, blog, 个人博客搭建, hexo blog, github 博客]
-description: 想用Hexo来写个人博客，却不知道如何下手？本文将带您一步步安装Hexo来搭建您的个人Hexo博客
+title: How to install Hexo
+tags:
+  - Hexo
+  - GitHub
+categories:
+  - Hexo
+keywords:
+  - hexo
+  - blog
+  - hexo blog
+  - github
+description: Want to use Hexo to write a personal blog, but don't know how to start? This article will take you step by step to install Hexo to build your personal Hexo blog
 date: 2020-02-09 15:49:20
 ---
-![Hexo Logo](https://cdn.bmyjacks.io/img/20200309164643.png?x-oss-process=style/style)
 
-## 首先，我们需要Git和Nodejs
-Git的安装就不演示了，相信大家使用hexo的都会安装git了。
+![Hexo Logo](https://assets.bmyjacks.cn/img/20200309164643.png?x-oss-process=style/style)
 
-### 下面是Nodejs的安装
+## First, we need Git and Node.js
+The installation of Git will not be demonstrated. I believe everyone who wants to use Hexo will install git.
 
-到nodejs官网下载[nodejs](https://nodejs.org/en/)
+### Below is the installation of Nodejs
 
-下载左边的和右边的均可，这里以右边的为例：
+Go to [node.js official website](https://nodejs.org/en/) to download.
 
-![nodejs download](https://cdn.bmyjacks.io/img/20200309164723.png?x-oss-process=style/style)
+Both the left and right can be downloaded, here is an example of the right:
 
-接着，我们按照正常的方法安装nodejs。
+![node.js download](https://assets.bmyjacks.cn/img/20200309164723.png?x-oss-process=style/style)
 
-安装完成后，在命令行里输入`node -v`查看node版本，出现版本号则安装成功，如下图所示：
+Next, we install node.js in the normal way.
 
-![nodejs version](https://cdn.bmyjacks.io/img/20200309165142.png?x-oss-process=style/style)
+After the installation is complete, enter `node -v` in the command line to view the node version, the installation is successful if the version number appears, as shown in the following figure:
 
-`npm -v`查看npm版本：
+![node version](https://assets.bmyjacks.cn/img/20200309165142.png?x-oss-process=style/style)
 
-![npm version](https://cdn.bmyjacks.io/img/20200309165203.png?x-oss-process=style/style)
+`npm -v` to view the npm version:
 
-好，我们已经安装完成了nodejs。
+![npm version](https://assets.bmyjacks.cn/img/20200309165203.png?x-oss-process=style/style)
 
-接下来，我们安装hexo。在命令行中输入`npm install hexo-cli -g`
+OK, we have installed node.js.
 
-我们来看看这条命令的意思：
-`npm`是最基础的开头部分，`install`是安装命令,`hexo-cli`是我们要安装的包的名字，而`-g`则代表全局安装，也就是说你在哪里都可以使用前面安装的包。了解你输入的命令非常重要，这样你以后就有机会在TravisCI上测试部署了。
+Next, we install Hexo. Enter `npm install hexo-cli -g` in the command line
 
-点击回车之后，我们看到命令行输出了一堆奇怪的字符，先不要管他，看到这些提示说明你安装成功了：
+Let's take a look at the meaning of this command:
 
-![install hexo](https://cdn.bmyjacks.io/img/20200309165221.png?x-oss-process=style/style)
+`npm` is the most basic beginning part, `install` is the installation command, `hexo-cli` is the name of the package we want to install, and `-g` stands for global installation, which means you can use it anywhere The previously installed package. It is very important to understand the commands you enter, so that you have the opportunity to test the deployment on TravisCI in the future.
 
+After clicking Enter, we saw a bunch of strange characters output from the command line. Leave him alone. Seeing these prompts indicates that your installation was successful:
 
-## 下一步，创建一个新的文件夹，并安装hexo
-
-我们创建一个新的文件夹，名字随意。
-
-![create folder](https://cdn.bmyjacks.io/img/20200309165237.png?x-oss-process=style/style)
+![install Hexo](https://assets.bmyjacks.cn/img/20200309165221.png?x-oss-process=style/style)
 
 
-在上一级文件夹中，输入`hexo init <你的文件夹名字>`来初始化这个文件夹：
+## Next, create a new folder and install Hexo
 
-![hexo initial](https://cdn.bmyjacks.io/img/20200309165254.png?x-oss-process=style/style)
+We create a new folder with any name.
 
-好，现在让我们进入该文件夹，运行`npm install`来安装一些依赖的包文件：
+![create folder](https://assets.bmyjacks.cn/img/20200309165237.png?x-oss-process=style/style)
 
-![npm install](https://cdn.bmyjacks.io/img/20200309165311.png?x-oss-process=style/style)
 
-然后运行`hexo generate`或者`hexo g`（这两个命令其实是一样的）来初始化hexo：
+In the upper level folder, enter `hexo init <your folder name>` to initialize this folder:
 
-![hexo generate](https://cdn.bmyjacks.io/img/20200309165331.png?x-oss-process=style/style)
+![hexo initial](https://assets.bmyjacks.cn/img/20200309165254.png?x-oss-process=style/style)
 
-接着，输入`hexo server`或`hexo s`（这两条命令也是一样的）来在本地运行hexo：
+Ok, now let's enter this folder and run `npm install` to install some dependent package files:
 
-![hexo server](https://cdn.bmyjacks.io/img/20200309165342.png?x-oss-process=style/style)
+![npm install](https://assets.bmyjacks.cn/img/20200309165311.png?x-oss-process=style/style)
 
-现在，打开你的浏览器，在地址栏输入`localhost:4000`回车后进入网页
+Then run `hexo generate` or `hexo g` (the two commands are actually the same) to initialize Hexo:
 
-![browser](https://cdn.bmyjacks.io/img/20200309165352.png?x-oss-process=style/style)
+![hexo generate](https://assets.bmyjacks.cn/img/20200309165331.png?x-oss-process=style/style)
 
-好了，我们已经成功的安装了hexo
+Then, enter `hexo server` or `hexo s` (the two commands are the same) to run Hexo web server locally:
 
-{% note success %}
-## 恭喜，我们安装成功了
-恭喜！
-{% endnote %}
+![hexo server](https://assets.bmyjacks.cn/img/20200309165342.png?x-oss-process=style/style)
 
-## 一些使用hexo的常见命令
+Now, open your browser, enter [`localhost:4000`](https://localhost:4000) in the address bar and press enter to enter the web page
 
- 结果| Hexo命令
------------- | -------------
-创建新的草稿 | `hexo new draft <name>`
-发布已经创建的草稿 | `hexo publish <name>`
-创建新页面 | `hexo new page <name>`
-生成网站文件 | `hexo generate`或`hexo g`
-开启网站服务器 | `hexo server`或`hexo s`
+![browser](https://assets.bmyjacks.cn/img/20200309165352.png?x-oss-process=style/style)
+
+Well, we have successfully installed hexo
+
+
+## Some common commands using Hexo
+
+| intention                 | command                   |
+| ------------------------- | ------------------------- |
+| Create new draft          | `hexo new draft <name>`   |
+| Publish the created draft | `hexo publish <name>`     |
+| Create new page           | `hexo new page <name>`    |
+| Generate website files    | `hexo generate`or`hexo g` |
+| Start built-in web server | `hexo server`or`hexo s`   |
+| Clean up generated files  | `hexo clean`              |
+| `hexo clean` + `hexo g`   | `hexo g -f`               |
 

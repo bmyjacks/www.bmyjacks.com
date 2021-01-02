@@ -1,115 +1,125 @@
 ---
-title: 使用Pi-hole来过滤广告
-tags: [Pi-hole, DNS, Ad Guard]
-categories: [Pi-hole]
-keywords: [pihole, ads, Adguard, 广告, dns]
-description: 现在网上纷繁复杂的广告严重扰乱了我们上网冲浪时的快感，还让我们为之付出流量，为什么不安装Pihole来过滤家中的广告呢？
+title: Use Pi-hole to filter ads
+tags:
+  - Pi-hole
+  - DNS
+  - Ad Guard
+categories:
+  - Pi-hole
+keywords:
+  - pihole
+  - ads
+  - AdGuard
+  - dns
+description: Nowadays, the numerous and complicated advertisements on the Internet seriously disturb our pleasure when surfing the Internet. Why not install Pi-hole to filter the advertisements at home?
 date: 2020-02-29 18:49:47
 ---
 
 {% note info %}
-### 信息
-本文中演示的系统是**Debian9 amd64**，其他版本可根据实际情况安装。
+## info
+The system demonstrated in this article is **Debian9 amd64**, other versions can be installed according to actual conditions.
 {% endnote %}
 
-## 首先，我们先更新系统
-终端输入：
+## First, we update the system
+Terminal input:
 ```bash
 sudo apt update
 sudo apt upgrade -y
 ```
-## 接下来，我们开始安装Pihole
 
-你可以进入[Pihole的GitHub页面](https://github.com/pi-hole/pi-hole)来安装，也可以按照下面的操作一步步来。
+## Next, we start to install Pi-hole
 
-先获取安装脚本：
+You can enter [Pi-hole's GitHub page](https://github.com/pi-hole/pi-hole) to install, or follow the steps below.
+
+Get the installation script first:
 ```bash
 wget -O basic-install.sh https://install.pi-hole.net
 ```
-{% note warning %}
-### 注意
-如果您无法访问GitHub网站，请在[IPaddress的网站](http://ipaddress.com)查询GitHub的IP地址修改hosts后访问。
-{% endnote %}
 
-接着，我们执行脚本：
+Next, we execute the script:
 ```bash
 sudo bash basic-install.sh
 ```
-在看到Pihole的logo之后进入了安装页面，直接回车到以下页面，
 
-用方向键滚动到最底下，选择`Custom`：
-![](https://cdn.bmyjacks.io/img/20200309180649.png?x-oss-process=style/style)
+After seeing Pi-hole’s logo, I entered the installation page, and then hit enter directly to the following page,
 
-输入上游DNS地址（这里以阿里云和百度为例）：
-![](https://cdn.bmyjacks.io/img/20200309180701.png?x-oss-process=style/style)
+Use the arrow keys to scroll to the bottom and select `Custom`:
+![](https://assets.bmyjacks.cn/img/20200309180649.png?x-oss-process=style/style)
+
+Enter the upstream DNS address (here, take Alibaba Cloud and Baidu as examples):
+![](https://assets.bmyjacks.cn/img/20200309180701.png?x-oss-process=style/style)
 
 
-之后一连串的回车来到这个页面：
-![](https://cdn.bmyjacks.io/img/20200309180712.png?x-oss-process=style/style)
+After a series of carriage returns came to this page:
+![](https://assets.bmyjacks.cn/img/20200309180712.png?x-oss-process=style/style)
 
 
 ```bash
-On #指的是安装web控制页面
-Off #指不安装web控制页面
+On #Means to the install the web control page
+Off #Means not to install the web control page
 ```
-这里我们选择`On`回车下一步
-![](https://cdn.bmyjacks.io/img/20200309180726.png?x-oss-process=style/style)
 
-这里选择是否安装web服务器端（lighttpd），如果您已经在服务器上安装了web服务端（比如nginx、apache）就选择`Off`，否则选择`On`安装lighttpd服务端。
+Here we choose `On` and press Enter to the next step
+![](https://assets.bmyjacks.cn/img/20200309180726.png?x-oss-process=style/style)
 
-之后直接按几次回车开始安装。
+Here you choose whether to install the web server (lighttpd). If you have installed the web server (such as nginx, apache) on the server, select `Off`, otherwise select `On` to install the lighttpd server.
 
-## 最后我们来调试Pihole
-### 首先更改web控制页面的密码
-终端输入：
+Then directly press Enter several times to start the installation.
+
+## Finally, let’s Configure Pi-hole
+### First change the password of the web control page
+Terminal input:
+
 ```bash
 pihole -a -p
 ```
-修改完成之后访问浏览器`http://你的IP地址/admin`进入web控制页面
-![](https://cdn.bmyjacks.io/img/20200309180738.png?x-oss-process=style/style)
 
-点击左侧的`Login`登录
-![](https://cdn.bmyjacks.io/img/20200309180757.png?x-oss-process=style/style)
+After the modification is completed, visit the browser `http://localhost/admin` to enter the web control page
+![](https://assets.bmyjacks.cn/img/20200309180738.png?x-oss-process=style/style)
 
-输入你刚刚设定的密码，可以勾选记住。
-![](https://cdn.bmyjacks.io/img/20200309180757.png?x-oss-process=style/style)
+Click on `Login` on the left to log in
+![](https://assets.bmyjacks.cn/img/20200309180757.png?x-oss-process=style/style)
 
-点击左侧的`Settings`进入设置页面
-![](https://cdn.bmyjacks.io/img/20200309180818.png?x-oss-process=style/style)
+Enter the password you just set, you can tick remember.
+![](https://assets.bmyjacks.cn/img/20200309180757.png?x-oss-process=style/style)
 
-在这里我们可以看到各种设定：
+Click on `Settings` on the left to enter the settings page
+![](https://assets.bmyjacks.cn/img/20200309180818.png?x-oss-process=style/style)
+
+Here we can see various settings:
 ```bash
-#System 监控系统的运行状态
-#Blocklists 广告拦截名单
-#DNS 上游DNS服务器配置
-#DHCP 将Pihole作为您的DHCP服务器使用
-#API/Web interface 关于API和web控制页面的设定
-#Privacy 隐私设定
-#Teleporter 报告错误
+System #Monitoring the operating status of the system
+Blocklists #Ad block list
+DNS #Upstream DNS server configuration
+DHCP #Use Pihole as your DHCP server
+API/Web interface #关于API和web控制页面的设定
+Privacy #Privacy settings
+Teleporter #Report error
 ```
-可以根据自己的需要调整设定。
 
-### 推荐几个常用的设定：
+You can adjust the settings according to your needs.
 
-blocklist里可以添加我的blocklist：[https://cdn.jsdelivr.net/gh/bmyjacks/adhosts/adhosts.txt](https://github.com/bmyjacks/adhosts)
+### Several commonly used settings are recommended:
 
-调整DNS缓存大小：
-终端修改文件：
+You can add my blocklist to the blocklist: [https://cdn.jsdelivr.net/gh/bmyjacks/adhosts@latest/big_edition.txt)
+
+Adjust DNS cache size:
+Terminal modification file:
 ```bash
 sudo nano /etc/dnsmasq.d/01-pihole.conf
-# 找到 cache-size=10000
-# 将10000修改为你想要的数值，例如
+# find cache-size=10000
+# Modify 10000 to the value you want, for example
 cache-size=200000
-# 保存，退出
+# Save, exit
 ```
-之后在web控制页面重启DNS服务器即可
-![](https://cdn.bmyjacks.io/img/20200309180857.png?x-oss-process=style/style)
+Then restart the DNS server on the web control page
+![](https://assets.bmyjacks.cn/img/20200309180857.png?x-oss-process=style/style)
 
 
-## 将Pihole设置为你的DNS服务器
-在路由器上将DNS服务器设置为你的Pihole，或者关闭路由器的DHCP进而使用Pihole提供的DHCP。
+## Set Pi-hole as your DNS server
+Set the DNS server to your Pi-hole on the router, or turn off the router's DHCP and use the DHCP provided by Pi-hole.
 
 {% note success %}
-## 恭喜
-恭喜你，成功完成了Pihole的安装，开始享受几乎无广告的网上冲浪吧。
+## Congratulations
+Congratulations, you have successfully completed the installation of Pi-hole, and start enjoying almost ad-free web surfing.
 {% endnote %}

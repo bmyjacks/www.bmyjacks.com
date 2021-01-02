@@ -1,111 +1,131 @@
 ---
-title: 如何编译安装最新版Openssl
-tags: [openssl, ssl]
-categories: [openssl]
-keywords: [openssl, ssl, web, nginx, apcache, lighttpd, canddy, https, 安全链接]
-description: 很多小伙伴在安装Openssl时遇到了困难，快来看看怎么完全安装最新版Openssl吧！
+title: How to compile and install the latest version of openssl
+tags:
+  - openssl
+  - ssl
+categories:
+  - openssl
+keywords:
+  - openssl
+  - ssl
+  - web
+  - nginx
+  - apcache
+  - lighttpd
+  - canddy
+  - https
+description: Many friends encountered difficulties when installing openssl, come and see how to completely install the latest version of openssl!
 date: 2020-02-15 16:23:39
 ---
 
 {% note info %}
-## 信息
-本文中演示的系统是**CentOS7 amd64**，并且要确保系统中没有安装Openssl.
+## info
+The system demonstrated in this article is **CentOS7 amd64**, and make sure that openssl is not installed in the system.
 {% endnote %}
 
-## 首先，我们先登录服务器后台命令行页面
-输入命令获取最新版本（1.1.1d）的安装包
-```
-# wget https://www.openssl.org/source/openssl-1.1.1d.tar.gz
--省略过程
+## First, we first log in to the server background command line page
+Enter the command to get the installation package of the latest version (1.1.1d)
+
+```bash
+wget https://www.openssl.org/source/openssl-1.1.1d.tar.gz
+-Omit the process
 xxxx-xx-xx xx:xx:xx (xxx MB/s) - ‘openssl-1.1.1d.tar.gz’ saved [8845861/8845861]
 ```
 
-### 获取完安装包之后解压，进入目录
+### After obtaining the installation package, unzip and enter the directory
 
-```
-# tar -xzf openssl-1.1.1d.tar.gz
-# cd openssl-1.1.1d
+```bash
+tar -xzf openssl-1.1.1d.tar.gz
+cd openssl-1.1.1d
 ```
 
-### 接下来配置并编译Openssl
+### Next configure and compile openssl
 
 {% note warning %}
-#### 注意
-请将第一行目录中的`/usr/local/openssl`替换成你想安装Openssl的目录的位置，在这里我们保留默认。
+#### Warning
+Please replace `/usr/local/openssl` in the first line of the directory with the location of the directory where you want to install openssl, here we keep the default.
 {% endnote %}
 
+```bash
+./config --prefix=/usr/local/openssl
+./config -t
+make
 ```
-# ./config --prefix=/usr/local/openssl
-# ./config -t
-# make
-```
+
 {% note info %}
-### 信息
-如出现`/bin/sh: gcc: command not found`那么安装`gcc`即可`yum install gcc`
+### info
+If `/bin/sh: gcc: command not found` appears, then install `gcc` and you can `yum install gcc`
 {% endnote %}
 
-### 然后安装
+### Then install
+
+```bash
+make install
 ```
-# make install
-```
 
-## 下面，我们来配置Openssl环境变量
+## Next, let's configure the openssl environment variable
 
-如果你现在在终端输入`openssl version`
+If you enter `openssl version` in the terminal now
 
-输出类似于以下这样：
+The output is similar to the following:
 
-```
-# openssl version
+```bash
+openssl version
 -bash: /usr/bin/openssl: No such file or directory
 ```
-所以接下来我们来配置它
 
-### 进入`/usr/local`并创建链接
+So next we will configure it
+
+### Enter `/usr/local` and create a link
+
+```bash
+cd /usr/local
+ln -s openssl ssl
 ```
-# cd /usr/local
-# ln -s openssl ssl
-```
-### 编辑`/etc/ld.so.conf`文件
-```
-# nano /etc/ld.so.conf
-在末尾添加/usr/local/openssl/lib
-看起来像下面这样
+
+### Edit the `/etc/ld.so.conf` file
+
+```bash
+nano /etc/ld.so.conf
+# Add /usr/local/openssl/lib at the end
+# Looks like below
 
 include ld.so.conf.d/*.conf
 /usr/local/openssl/lib
 ```
+
 {% note info %}
-#### 信息
-如出现`-bash: nano: command not found`那么安装`nano`即可`yum install nano`
+#### info
+If `-bash: nano: command not found` appears, then install `nano` and then `yum install nano`
 {% endnote %}
 
-接着，按`ctrl+o`保存，按`ctrl+x`离开nano
+Then, press <kbd>Ctrl</kbd>+<kbd>O</kbd> to save, press <kbd>Ctrl</kbd>+<kbd>X</kbd> to leave nano
 
-输入`ldconfig`共享动态链接库
+Enter `ldconfig` shared dynamic link library
 
-### 配置环境变量
-编辑`.bashrc`文件：
+### Configure environment variables Configure environment variables
+Edit `.bashrc` file：
+
+```bash
+cd 
+nano .bashrc
 ```
-# cd 
-# nano .bashrc
-```
-在末尾添加
-```
+
+Add at the end
+
+```bash
 export OPENSSL=/usr/local/openssl/bin
 export PATH=$OPENSSL:$PATH:$HOME/bin
 ```
-保存退出，使用`source .bashrc`来使修改生效。
 
-## 最后
-输入`which openssl`查看openssl路径，输入`openssl version`查看版本。
+Save and exit, and use `source .bashrc` to make the changes effective.
+
+## At last
+Enter `which openssl` to view the openssl path, and enter `openssl version` to view the version.
+
+```bash
+which openssl
+# /usr/local/openssl/bin/openssl
+openssl version
+# OpenSSL 1.1.1d  10 Sep 2019
 ```
-# which openssl
-/usr/local/openssl/bin/openssl
-# openssl version
-OpenSSL 1.1.1d  10 Sep 2019
-```
-{% note success %}
-## 恭喜
-恭喜你，成功完成了Openssl的编译安装。
-{% endnote %}

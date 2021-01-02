@@ -1,56 +1,64 @@
 ---
-title: Markdown使用语法
-tags: [markdown, GitHub, blog, hexo, git]
-categories: [markdown]
-description: Markdown的使用语法
-keywords: [markdown, github, gitee, osc, opensource, 使用方法, 正确语法, 代码, blog, blogger, 博客, hexo]
+title: Markdown syntax
+tags:
+  - markdown
+  - GitHub
+  - blog
+  - hexo
+  - git
+categories: markdown
+description: Markdown's usage syntax
+keywords: [markdown, github, gitee, osc, opensource, blog, blogger, hexo]
 date: 2020-03-22 11:45:15
 ---
 
-![](https://cdn.bmyjacks.io/img/20200322113727.jpg?x-oss-process=style/style)
-## 标题
-```markdown
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-```
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
+![](https://assets.bmyjacks.cn/img/20200322113727.jpg?x-oss-process=style/style)
 
-## 段落
+## Titles
 ```markdown
-这是第一段  
-这是第二段
-
-这是第三段
-```
-这是第一段  
-这是第二段
-这是第三段
-
-## 字体
-```markdown
-*斜体*
-_斜体_
-**粗体**
-__粗体__
-***粗斜体***
-___粗斜体___
+# First level title
+## Second level title
+### Third level title
+#### Fourth level title
+##### Fifth level title
+###### Sixth level title
 ```
 
-*斜体*
-_斜体_
-**粗体**
-__粗体__
-***粗斜体***
-___粗斜体___
+### Third level title
+#### Fourth level title
+##### Fifth level title
+###### Sixth level title
 
-## 分割
+## Paragraphs
+```markdown
+This is the first paragraph  
+This is the second paragraph
+
+This is the third paragraph
+```
+
+This is the first paragraph  
+This is the second paragraph
+This is the third paragraph
+
+## Typeface
+```markdown
+*Italics*
+_Italics_
+**Bold**
+__Bold__
+***Bold italics***
+___Bold italics___
+```
+
+*Italics*
+_Italics_
+**Bold**
+__Bold__
+***Bold italics***
+___Bold italics___
+
+## Splitters
 ```markdown
 ***
 
@@ -69,35 +77,35 @@ ___粗斜体___
 - - -
 ----------
 
-## 删除
+## Strikethrough
 
 ```markdown
-~~这是删除线~~
+~~This is the strikethrough~~
 ```
 
-~~这是删除线~~
+~~This is the strikethrough~~
 
-## 下划线
+## Underline
 
 ```markdown
-<u>这是下划线</u>
+<u>This is the underline</u>
 ```
 
-<u>这是下划线</u>
+<u>This is the underline</u>
 
-## 标注
+## Annotations
 ```markdown
-这是要标记的[^文本]
-[^文本] : 这是标记内容
+This is the [^text] to mark.
+[^text] : This is the content
 ```
 
 {% note info %}
-### 信息
-由于本博客使用pangu分割中英文，所以无法显示标注，请见谅
+#### info
+Due to the limitation of blog, we can't display annotations. Sorry.
 {% endnote %}
 
-## 列表
-### 无序列表
+## Lists
+### Unordered lists
 ```markdown
 * 1
 * 2
@@ -122,7 +130,7 @@ ___粗斜体___
 - 2
 - 3
 
-### 有序列表
+### Ordered lists
 
 ```markdown
 1. 1
@@ -134,7 +142,7 @@ ___粗斜体___
 2. 2
 3. 3
 
-### 列表嵌套
+### Lists nesting
 ```markdown
 1. 1
     - 1.1
@@ -151,8 +159,8 @@ ___粗斜体___
     - 2.1
     - 2.2
 
-## 区块
-### 标准区块
+## Blocks
+### Standard blocks
 ```markdown
 > 1
 > 2
@@ -163,7 +171,7 @@ ___粗斜体___
 > 2
 > 3
 
-### 嵌套区块
+### Nested blocks
 ```markdown
 > 1
 >> 2
@@ -174,93 +182,96 @@ ___粗斜体___
 >> 2
 >>> 3
 
-## 代码
-```markdown
-这是`句子中的代码`。
-    这是空四格代码print("Hello")
-```
-![](https://cdn.bmyjacks.io/img/20200322143630.png?x-oss-process=style/style)
+## Code
+{% note warning %}
+### Warning
+Due to the limitation of code representation in this blog, I suggest you use the following website to query the code format of Markdown.[https://github.github.com/gfm/#code-spans](https://github.github.com/gfm/#code-spans)
+{% endnote %}
 
-这是`句子中的代码`。
+## Links
+### Standard links
+```markdown
+[Text link](Link address)
+![Picture alt](Link address)
 ```
-这是空四格代码print("Hello")
-```
-```
-这是代码快
-```
-还可以指定编程语言来启用语法高亮例如在 **```** 后方加上markdown
 
-## 链接
-### 基本链接
+[TextLink](https://www.bmyjacks.com/2020/markdown.html#TextLink)
+![Pictures linking](https://assets.bmyjacks.cn/img/20200322144321.png?x-oss-process=style/style)
+
+### Advanced links
 ```markdown
-[文字链接](链接地址)
-![图片alt](链接地址)
-```
-[文字链接](https://www.bmyjacks.cn/2020/markdown.html#文字连接)
-![图片链接](https://cdn.bmyjacks.io/img/20200322144321.png?x-oss-process=style/style)
-### 高级链接
-```markdown
-这是一条[高级链接][1]
-然后在结尾处为变量赋值
-[1](链接地址)
+This is an [advanced link][1]
+Then assign a value to the variable at the end of the article
+[1](Link address)
 ```
 
 {% note info %}
-#### 信息
-由于本博客使用pangu分割中英文，所以无法显示高级链接，请见谅
+#### info
+Due to the limitation of blog, we can't display advanced links. Sorry.
 {% endnote %}
 
-## 表格
-### 绘制表格
+## Forms
+### Drawing Forms
 ```markdown
-| 表头   | 表头    |
+| Header | Header |
 | ------ | ------ |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
+| Cell   | Cell   |
+| Cell   | Cell   |
 ```
 
-| 表头   | 表头    |
+| Header | Header |
 | ------ | ------ |
-| 单元格  | 单元格 |
-| 单元格  | 单元格 |
+| Cell   | Cell   |
+| Cell   | Cell   |
 
-### 对齐方式
-
+### Alignment
 ```markdown
-| 左对齐     | 右对齐    | 居中对齐     |
-| :---------| --------: | :---------: |
-| 这是左对齐 | 这是右对齐 | 这是居中对齐 |
-| 这是左对齐 | 这是右对齐 | 这是居中对齐 |
+| Left alignment         | right alignment             | Center alignment         |
+| :--------------------- | --------------------------: | :----------------------: |
+| This is left alignment | This is the right alignment | This is center alignment |
+| This is left alignment | This is the right alignment | This is center alignment |
 ```
+
 {% note info %}
-#### 信息
-本博客由于特殊原因无法显示对齐表格，请见谅
+#### info
+Due to special reasons, this blog can not display the alignment table.Sorry.
 {% endnote %}
 
-## 按键
+## Buttoms
 ```markdown
-这是一个<kbd>Ctrl</kbd>和<kbd>enter</kbd>
+This is <kbd>Ctrl</kbd>和<kbd>enter</kbd>
 ```
-这是一个<kbd>Ctrl</kbd>和<kbd>enter</kbd>
+This is a<kbd>Ctrl</kbd>和<kbd>enter</kbd>
 
-## 转义符号
+## Escape symbols
 ```markdown
-在以下字符前插入反斜杠\来帮助转意
-\   反斜线
-`   反引号
-*   星号
-_   下划线
-{}  花括号
-[]  方括号
-()  小括号
-#   井字号
-+   加号
--   减号
-.   英文句点
-!   感叹号
+Insert a backslash\ before the following characters to help paraphrase
+\   backslash
+`   backquote
+*   asterisk
+_   underline
+{}  curly brackets
+[]  square brackets
+()  parentheses
+#   #
++   plus sign
+-   minus sign
+.   English period
+!   exclamatory mark
 ```
 
-\\ 反斜线  \` 反引号  \* 星号  \_ 下划线  \{} 花括号  \[] 方括号  \() 小括号  \# 井字号  \+ 加号  \- 减号  \. 英文句点  \! 感叹号
+\\ backslash
+\` backquote
+\* asterisk
+\_ underline
+\{} curly brackets
+\[] square brackets
+\() parentheses
+\# #
+\+ plus sign
+\- minus sign
+\. English period
+\! exclamatory mark
 
-## 数学公式以及图像
-有待补充
+## Mathematical formulas and images
+It needs to be supplemented.

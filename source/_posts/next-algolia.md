@@ -1,67 +1,98 @@
 ---
-title: 给Hexo的NexT主题配置algolia搜索
-tags: [hexo, NexT, algolia, search]
-categories: [NexT]
-keywords: [hexo, blog, next, hexo主题, algolia, 搜索, 本地, 博客, 网站]
-description: 在安装了hexo的NexT主题后，我们来看看如何开启algolia搜索
+title: Configure algolia search for NexT theme in hexo
+tags:
+  - hexo
+  - NexT
+  - algolia
+  - search
+categories:
+  - NexT
+keywords:
+  - hexo
+  - blog
+  - next
+  - algolia
+description: After installing the NexT theme of hexo, let's take a look at how to configure algolia search
 date: 2020-03-13 15:43:09
 ---
 
-## 首先，我们需要注册一个algolia账号
-我们打开[algolia的官方网站](https://www.algolia.com/)
+## First, we need to register an algolia account
+Open [algolia's official website](https://www.algolia.com/)
 
-![](https://cdn.bmyjacks.io/img/20200310184600.png?x-oss-process=style/style)
+![](https://assets.bmyjacks.cn/img/20200310184600.png?x-oss-process=style/style)
 
-点击`FREE TRIAL`注册一个账号
+Click`FREE TRIAL`to register an account
 
-![](https://cdn.bmyjacks.io/img/20200310205536.png?x-oss-process=style/style)
+![](https://assets.bmyjacks.cn/img/20200310205536.png?x-oss-process=style/style)
 
-填写相应的邮箱以及密码之后来到控制台，新建一个应用：
-![20200310205818](https://cdn.bmyjacks.io/img/20200310205818.png?x-oss-process=style/style)
-接着选择数据存放的位置，一般在中国就选香港（HONGKONG）就行了
-![20200310205938](https://cdn.bmyjacks.io/img/20200310205938.png?x-oss-process=style/style)
-之后点击右侧的`Create index`创建索引名称
-![20200310211031](https://cdn.bmyjacks.io/img/20200310211031.png?x-oss-process=style/style)
-必须要记好这个名称，之后会用到，比如这里填test，点击create
-![20200310211153](https://cdn.bmyjacks.io/img/20200310211153.png?x-oss-process=style/style)
-创建成功后在左侧找到API Keys
-![20200310211303](https://cdn.bmyjacks.io/img/20200310211303.png?x-oss-process=style/style)
-![20200310211356](https://cdn.bmyjacks.io/img/20200310211356.png?x-oss-process=style/style)
-将图中所示的API Key保存好，接着我们开始在Hexo中配置
-## Hexo中的配置
-我们先安装algolia的模块
+After filling in the corresponding email address and password, go to the console and create a new application:
+
+![20200310205818](https://assets.bmyjacks.cn/img/20200310205818.png?x-oss-process=style/style)
+
+Then select the location of the data storage, please choose the location according to your needs.
+
+![20200310205938](https://assets.bmyjacks.cn/img/20200310205938.png?x-oss-process=style/style)
+
+Then click `Create index` on the right to create the index name
+
+![20200310211031](https://assets.bmyjacks.cn/img/20200310211031.png?x-oss-process=style/style)
+
+This name must be remembered, it will be used later. For example, fill in `test` here, click `create`
+
+![20200310211153](https://assets.bmyjacks.cn/img/20200310211153.png?x-oss-process=style/style)
+
+After the creation is successful, find `API Keys` on the left
+
+![20200310211303](https://assets.bmyjacks.cn/img/20200310211303.png?x-oss-process=style/style)
+
+![20200310211356](https://assets.bmyjacks.cn/img/20200310211356.png?x-oss-process=style/style)
+
+Save the API Key shown in the figure, and then we start to configure in hexo
+
+## Configuration in hexo
+
+We first install the algolia plugin
+
 ```bash
 npm install hexo-algolia --save
 ```
-接着在{% label [warning]@站点的config文件 %}中配置
+
+Then configure in the **hexo's** config file
+
 ```yml
 algolia:
   applicationID: 'Your applicationID'
   apiKey: 'Your Search-Only apikey'
-  indexName: 'test(上面你创建索引时使用的名称)'
-
+  indexName: 'test(The name you used when creating the index above)'
 ```
-![20200313153519](https://cdn.bmyjacks.io/img/20200313153519.png?x-oss-process=style/style)
 
-在{% label [warning]@NexT的config文件 %}中配置
-![20200313153620](https://cdn.bmyjacks.io/img/20200313153620.png?x-oss-process=style/style)
-将`enable`设置为`true`
+![20200313153519](https://assets.bmyjacks.cn/img/20200313153519.png?x-oss-process=style/style)
 
-完成站点的配置
-## 将索引上传algolia服务器
-执行
+Configure in **NexT's** config file
+
+![20200313153620](https://assets.bmyjacks.cn/img/20200313153620.png?x-oss-process=style/style)
+
+Set `enable` to `true`
+
+## Upload the index to the algolia server
+run
+
 ```bash
 hexo clean
 hexo algolia
 ```
-如果出现以下情况
-![20200313153947](https://cdn.bmyjacks.io/img/20200313153947.png?x-oss-process=style/style)
-输入
+
+If the following situation occurs
+
+![20200313153947](https://assets.bmyjacks.cn/img/20200313153947.png?x-oss-process=style/style)
+
+run
 ```bash
 set HEXO_ALGOLIA_INDEXING_KEY=Your Admin apikey
 hexo algolia
 ```
+
 {% note success %}
-## 恭喜
-恭喜您，完成了algolia的安装和配置
+## Congratulations
+Congratulations to you，completed the installation and configuration of algolia!
 {% endnote %}
